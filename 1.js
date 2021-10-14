@@ -15,7 +15,9 @@ function hitungBarang(quality, quantity){
                     const total = A.price * quantity;
                     const discount = quantity * 231;
                     const payment = total-discount;
-                    return `-Total harga barang : ${total}\n-Potongan : ${discount}\n-Total yang harus dibayar : ${payment}`
+                    console.log(`-Total harga barang : ${total}`)
+                    console.log(`-Potongan : ${discount}`)
+                    console.log(`-Total yang harus dibayar : ${payment}`)
                     break;
                 }
                 const totalA = A.price * quantity;
@@ -28,9 +30,9 @@ function hitungBarang(quality, quantity){
                     const discount = quantity * Math.floor((B.price * 0.23))
                     const payment = total - discount;
                     
-                    return `Total harga barang : ${total} 
-                    Potongan : ${discount} 
-                    Total yang harus dibayar : ${payment}`
+                    console.log(`-Total harga barang : ${total}`)
+                    console.log(`-Potongan : ${discount}`)
+                    console.log(`-Total yang harus dibayar : ${payment}`)
                     break
                 }
                 const totalB = B.price * quantity;
