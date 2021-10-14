@@ -1,0 +1,30 @@
+{{>head}}
+<div class="container mt-5">
+    <form action="/province/add" method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Nama Provinsi :</label>
+        <input type="text" class="form-control" name="nama"> 
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Diresmikan pada :</label>
+        <input type="text" class="form-control" name="diresmikan" placeholder="yyyy-mm-dd">
+    </div>
+    <div class="mb-3">
+      <label for="formFile" class="form-label">Upload photo <img src="/static/icons/disc.svg" alt=""></label>
+      <input class="form-control" type="file" id="formFile" name="photo">
+    </div>
+    <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupSelect01">Nama pulau :</label>
+        <select name="pulau" class="form-select">
+          <option selected>Choose one..</option>
+          <option value="Jawa">Jawa</option>
+          <option value="Sumatera">Sumatera</option>
+          <option value="Kalimantan">Kalimantan</option>
+          <option value="Sulawesi">Sulawesi</option>
+          <option value="Papua">Papua</option>
+        </select>
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{{>footer}}

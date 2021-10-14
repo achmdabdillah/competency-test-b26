@@ -1,0 +1,35 @@
+{{>head}}
+<section id="province" class="bg-dark p-5">
+    <div class="container">
+        {{#if provinsi}}
+        <div class="d-flex justify-content-between mb-5">
+            <div class="me-5">
+                <h2 class="text-center text-white">{{provinsi.0.nama}}</h2>
+                <a href="/"><img class="branding" src="/uploads/{{provinsi.0.photo}}" alt="{{provinsi.0.photo}}"></a>
+            </div>
+            <div>
+                <a href="/province/add/" class="btn btn-gradient">Tambah Provinsi</a>
+                <a href="/district/add" class="btn btn-gradient">Tambah Kabupaten</a>
+            </div>
+        </div>
+        {{/if}}
+        <div class="row g-4 justify-content-center">
+        {{#each kabupaten}}
+            <div class="col-md-6 col-lg-3">
+                <div class="d-flex justify-content-around">
+                    <a class="text-white" href="/district/edit/{{this.id}}">Edit <i class="bi bi-brush-fill me-5"></i></a>
+                    <a class="text-white" href="/district/delete/{{this.id}}">Delete <i class="bi bi-trash-fill"></i></a>
+                </div>
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <img class="mb-3 img-fluid image" src="/uploads/{{this.photo}}" alt="{{this.photo}}">
+                        <h3 class="card-title mb-3">{{this.nama}}</h3>
+                        <p class="card-text">{{this.diresmikan}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>
+{{>footer}}

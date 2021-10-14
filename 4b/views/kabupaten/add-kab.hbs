@@ -1,0 +1,28 @@
+{{>head}}
+<div class="container mt-5">
+    <form action="/district/add" method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Nama Kabupaten :</label>
+        <input type="text" class="form-control" name="nama"> 
+    </div>
+    <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupSelect01">Nama Provinsi :</label>
+        <select name="provinsi_id" class="form-select" id="provinsi">
+          <option selected>Choose one..</option>
+          {{#each provinsi}}
+          <option value="{{this.id}}">{{this.nama}}</option>
+          {{/each}}
+        </select>
+      </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Diresmikan pada :</label>
+        <input type="text" class="form-control" name="diresmikan" placeholder="yyyy-mm-dd">
+    </div>
+    <div class="mb-3">
+      <label for="formFile" class="form-label">Upload photo <img src="/static/icons/disc.svg" alt=""></label>
+      <input class="form-control" type="file" id="formFile" name="photo">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{{>footer}}

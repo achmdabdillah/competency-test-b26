@@ -1,0 +1,23 @@
+{{>head}}
+<div class="container text center pt-5">
+  <form action="/province/edit/{{province.id}}" method="POST" enctype="multipart/form-data">
+  <input type="hidden" name="id" value="{{province.id}}">
+  <input type="hidden" name="oldImage" value="{{province.photo}}">
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default">Nama :</span>
+      <input type="text" name="nama" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="{{province.nama}}">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Diresmikan pada :</label>
+        <input type="text" class="form-control" name="diresmikan" placeholder="yyyy-mm-dd" value="{{province.diresmikan}}">
+    </div>
+    <div class="mb-3">
+      <label for="formFile" class="form-label">Ubah foto <img src="/static/icons/disc.svg" alt=""></label>
+      <input class="form-control" name="photo" type="file" id="formFile">
+    </div>
+    <div class="text-center">
+      <button class="btn btn-success mt-3 px-5 py-2" type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+{{>footer}}

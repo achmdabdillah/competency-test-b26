@@ -1,0 +1,39 @@
+.image {
+    height:200px;
+}
+.branding {
+    height: 100px;
+    margin-top: 20px;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.text-white {
+    color: #Fff;
+}
+
+input:focus::placeholder{
+    color: transparent;
+}
+
+.btn-gradient{
+    background: linear-gradient(to bottom, black, #ccc);
+    color: white;
+    margin-right: 20px;
+}
+
+.detail-btn{
+    background: linear-gradient(to bottom, darkred, #ccc);
+    color: black;
+}
+
+.detail-btn:hover{
+    color: white;
+}
