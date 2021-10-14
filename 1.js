@@ -29,7 +29,6 @@ function hitungBarang(quality, quantity){
                     const total = B.price * quantity
                     const discount = quantity * Math.floor((B.price * 0.23))
                     const payment = total - discount;
-                    
                     console.log(`-Total harga barang : ${total}`)
                     console.log(`-Potongan : ${discount}`)
                     console.log(`-Total yang harus dibayar : ${payment}`)
