@@ -21,7 +21,7 @@ function hitungBarang(quality, quantity){
                     break;
                 }
                 const totalA = A.price * quantity;
-                return `harga barang : ${totalA}`
+                console.log(`harga barang : ${totalA}`)
                 break;
 
         case B : if(quantity > 7)
@@ -35,11 +35,11 @@ function hitungBarang(quality, quantity){
                     break
                 }
                 const totalB = B.price * quantity;
-                return `harga barang : ${totalB}`
+                console.log(`harga barang : ${totalB}`)
                 break;
 
         case C : const totalC = C.price * quantity
-                return `harga barang : ${totalC}`
+                console.log(`harga barang : ${totalC})
                 break;
             
     }
